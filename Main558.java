@@ -36,15 +36,15 @@ public class Main558 {
 					dist[e.v] = Math.min(dist[e.v], dist[e.u] + e.w);
 			}
 			
-			boolean pweds = false;
+			boolean possible = false;
 			for(Edge e : edges) {
 				if(dist[e.u] + e.w < dist[e.v]) {
-					pweds = true;
+					possible = true;
 					break;
 				}
 			}
 			
-			if(pweds)
+			if(possible)
 				pw.println("possible");
 			else
 				pw.println("not possible");
